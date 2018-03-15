@@ -6,7 +6,7 @@ import (
 	"os/signal"
 	"sync"
 	"errors"
-	l "me/micro/log"
+	l "github.com/efureev/micro/log"
 )
 
 type Service interface {
@@ -246,9 +246,9 @@ func NewService(opts ...Option) Service {
 	options := newOptions(opts...)
 
 	return &BaseService{
-		opts:      options,
-		status:    ServiceStatusStop,
-		services:  make(map[string]*Service),
+		opts:     options,
+		status:   ServiceStatusStop,
+		services: make(map[string]*Service),
 	}
 }
 

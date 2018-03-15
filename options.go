@@ -2,7 +2,7 @@ package micro
 
 import (
 	"context"
-	"sitesoft/coder.mvd/micro/meta"
+	"github.com/efureev/micro/meta"
 )
 
 type Option func(*Options)
